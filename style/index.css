@@ -48,21 +48,23 @@ body{
 }
 
 h1{
-    padding: 5%;
+    padding-top: 5%;
+    padding-bottom: 3%;
     color: #a83e32 ;
     font-size: 6rem ;
-    font-family: Oxygen ;
+    font-family: 'Oxygen' ;
     text-align: center;
 }
 
 h2{
-    color:#49cead;
+    color:#5e6d28;
   font-size: 3rem; 
 }
 
 h3{
     color:#4f4f4f;
     font-size: 2.2rem;
+
 }
 
 h2, h3 {
@@ -76,8 +78,8 @@ h2, h3 {
     font-family: 'Rubik';
     font-size:1.8rem;
     padding:2% 4%;
-    margin:5%;
-    border-radius: 20%;
+    border-radius: 20px;
+    text-decoration: none;
 }   
 /*helper classes*/
 .projPic{
@@ -93,8 +95,13 @@ nav {
         width:100%;
         top:0;
         text-align: center;
+        padding: 2%;
+        
     }
 
+.links {
+    text-decoration: none;
+}
 #top{
     background-position: bottom;
     display:flex;
@@ -106,13 +113,16 @@ nav {
 /*about section styles */
 
 #about{
-        padding: 10%;
-        height:65vh;
+        padding: 5%;
         background-color: coral;
         display:flex;
-        justify-content: flex-end;
-        align-items: center;
+        flex-direction: column;
+      
     }
+
+#about h3, #about p {
+    background-color: coral;
+}
 
 /*project section styles*/
 
@@ -123,9 +133,7 @@ nav {
     display:flex;
     flex-wrap:wrap;
     flex-direction:row;
-    justify-content: space-evenly;
 }
-
 
 .proj1{
     background-image:url('../images/proj1_img.jpeg');
@@ -157,12 +165,17 @@ nav {
     text-align:center;
 }
 
-.container2{
+.container2 {
+    background-color: darkgray;
     display:flex;
-    flex-wrap:wrap;
-    flex-direction:row;
-    justify-content: center;
+    flex-flow:row wrap;
+ 
+    
     }
+
+.container2 p {
+    background-color: darkgray;
+}
 
 .text1{
     margin: 5%;
@@ -171,9 +184,33 @@ nav {
 }
 
 /*footer*/
-footer a {
+footer {
     display:flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+}
+
+footer a{
+    padding: 2%;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+.container{
+        display:flex;
+        flex-wrap:wrap;
+        flex-direction:row;
+    }
+ .projPic {
+     width: 50%;
+ }
+   .text{
+    width: 50%;
+    text-align:center;
+   }
+}
+
+@media (max-width: 500px) {
+
 }
